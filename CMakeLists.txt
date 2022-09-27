@@ -12,8 +12,12 @@ include_directories(./include)
 add_library(MyTest SHARED  src/MyTest.cpp)
 
 
+#add_library( calculate_shared SHARED IMPORTED)
+#set_target_properties( calculate_shared
+#                       PROPERTIES IMPORTED_LOCATION
+#                       ${PROJECT_SOURCE_DIR}/libs/libcalculate_shared.so)
 
-# 添加一个可执行程序
+# 生成可执行程序
 # 语法：add_executable( 程序名 源代码文件 ）
 add_executable(  main
                  src/main.cpp
@@ -23,6 +27,6 @@ add_executable(  main
 #连接共享库
 target_link_libraries(  main
                         MyTest
+                        #calculate_shared
                         ${PROJECT_SOURCE_DIR}/libs/libcalculate_shared.so
-
                      )
