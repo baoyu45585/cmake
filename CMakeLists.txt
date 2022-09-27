@@ -9,13 +9,16 @@ include_directories(./include)
 #生成共享库
 #get the shared package
 #here needs no .hpp
-add_library(MyTest SHARED  MyTest.cpp)
+add_library(MyTest SHARED  src/MyTest.cpp)
 
 
 
 # 添加一个可执行程序
 # 语法：add_executable( 程序名 源代码文件 ）
-add_executable(main main.cpp)
+add_executable(  main
+                 src/main.cpp
+                 src/test.cpp
+              )
 
 #连接共享库
 target_link_libraries(  main
