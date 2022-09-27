@@ -4,9 +4,13 @@
 
 #include <iostream>
 #include "hello.h"
+#include "MyTest.h"
+using namespace std;
 
 int main(int argc, char **argv)
 {
     int ss=add(2,3);
-    std::cout <<ss<<"---"<< "Hello, world!\n";
+     int m=sum(2);
+    cout<<"the result is:"<<ss<<endl;
+    cout<<"sum is:"<<m<<endl;
 }
