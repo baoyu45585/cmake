@@ -18,4 +18,8 @@ add_library(MyTest SHARED  MyTest.cpp)
 add_executable(main main.cpp)
 
 #连接共享库
-target_link_libraries(main  MyTest   ${PROJECT_SOURCE_DIR}/libs/libcalculate_shared.so)
+target_link_libraries(  main
+                        MyTest
+                        ${PROJECT_SOURCE_DIR}/libs/libcalculate_shared.so
+
+                     )
